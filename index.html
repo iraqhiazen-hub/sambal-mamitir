@@ -174,64 +174,57 @@ nav.scrolled{
   display: block;
 }
 .hero-banner-cta {
-  position: absolute;
-  bottom: 14%;
-  left: 4.5%;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--shopee);
-  color: white;
-  padding: 0.7rem 1.8rem;
-  border-radius: 30px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(0.72rem, 1.8vw, 1rem);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  transition: all 0.2s;
-  box-shadow: 0 4px 20px rgba(238,77,45,0.45);
-  white-space: nowrap;
+  display: none;
 }
 .hero-banner-cta:hover {
   background: var(--shopee-dark);
   transform: translateY(-2px);
 }
 .hero-trust-bar {
-  background: var(--ink);
-  padding: 0.85rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  background: var(--red-dark);
+  padding: 0.7rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.5rem;
 }
 .hero-trust-bar span {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.55);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.65);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  text-align: center;
+  background: rgba(255,255,255,0.07);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
 }
 @media(min-width: 768px) {
   .hero-banner { margin-top: 66px; }
   .hero-trust-bar { gap: 3rem; padding: 1rem 3rem; }
   .hero-banner-inner { position: relative; }
   .hero-banner-cta {
+    display: inline-flex;
     position: absolute;
     bottom: 14%; left: 4.5%;
-    display: inline-flex; align-items: center;
+    align-items: center; gap: 8px;
     padding: 0.7rem 1.8rem;
+    border-radius: 30px;
     font-size: clamp(0.72rem, 1.8vw, 1rem);
-    text-align: left;
+    white-space: nowrap;
     box-shadow: 0 4px 20px rgba(238,77,45,0.45);
   }
+  .proof-bar{
+    display:flex; align-items:center; justify-content:center;
+    gap:3.5rem; padding:1.4rem 3rem;
+  }
+  .proof-bar .proof-div{display:block;}
 }
 
 /* ── PROOF BAR ── */
 .proof-bar{
-  background:var(--ink);padding:1.2rem 1.5rem;
-  display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;
+  background:var(--ink);padding:1.2rem 1rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
 }
+.proof-bar .proof-div{display:none;}
 .proof-item{text-align:center;padding:0 0.5rem}
 .proof-num{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--gold-light);letter-spacing:0.05em;line-height:1}
 .proof-label{font-size:0.68rem;color:rgba(255,255,255,0.4);font-weight:500;letter-spacing:0.08em;text-transform:uppercase}
